@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API Demo</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/weather-api.js"></script>
+    <script defer src="./js/demo.js"></script>
+    <link rel="stylesheet" href="./styles/demo.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1 class="app__heading">T-t-talk about the weather</h1>
+
+      <form id="form" class="form">
+        <div class="form__line">
+          <label>
+            Enter city name:
+            <input class="form__input" type="text" name="city" />
+          </label>
+        </div>
+        <div class="form__line">
+          <span>Units: </span>
+          <label class="form__radio-label">
+            <input type="radio" name="units" value="metric" checked />
+            Celcius
+          </label>
+          <label class="form__radio-label">
+            <input type="radio" name="units" value="imperial" />
+            Fahrenheit
+          </label>
+        </div>
+        <div>
+          <button class="form__submit">Submit</button>
+          <span id="error" class="error"></span>
+        </div>
+      </form>
+
+      <ul id="weather-list" class="weather-list"></ul>
+    </main>
+  </body>
+</html>

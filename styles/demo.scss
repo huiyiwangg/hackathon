@@ -1,0 +1,61 @@
+@use "./partials/globals";
+@use "./partials/variables" as *;
+
+.app {
+  width: 600px;
+  margin: auto;
+  font-size: 1.3rem;
+  // 'perspective' here and 'rotate' on line 46 make the star wars effect happen
+  perspective: 200px;
+
+  &__heading {
+    text-align: center;
+  }
+}
+
+.form {
+  position: relative;
+  padding: 0.3rem;
+
+  &__line,
+  &__submit {
+    font-size: 1.4rem;
+    margin: 1rem;
+  }
+
+  &__input {
+    font-size: 1.4rem;
+  }
+
+  &__radio-label {
+    margin: 0 1rem;
+  }
+
+  // I'm using the ::after pseudo-element here
+  &--error::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 4px solid $error-color;
+    border-radius: 4px;
+    z-index: -1;
+  }
+}
+
+.weather-list {
+  rotate: x 8deg;
+  margin: 0;
+  padding: 0;
+}
+
+.weather {
+  border: 4px solid cornflowerblue;
+  border-radius: 4px;
+  margin: 0.4rem;
+  padding: 0.4rem;
+  list-style-type: none;
+}
+
+.error {
+  color: $error-color;
+}
